@@ -1,0 +1,20 @@
+* redo the top gutter - pay attention to hover vibes
+* make sure the fonts are cool - in terms of font family and font-color
+* BUILD THE BASIC ELEMENTS FOR SAMPLE PAGES
+
+	-> left nav
+
+	-> basic form with a (green) panel (make sure btns are cool)
+
+	-> manage page
+
+	-> sample "show" page (figure out the modal vibes)
+
+	-> WE SHOULD NOW BE COOL - TEST EVERYTHING.
+
+* Make sure it looks good on mobile devices.
+
+* Build a nice looking login page.
+
+
+-> add it to the desktop app and test test test!!!!
