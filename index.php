@@ -27,6 +27,107 @@
 	<div>
 		<div id="main">
 			<h1>Headline Looks Like This</h1>
+
+			<p>
+				<ul>
+					<li>Make modal look nice (big and small one?)</li>
+			        <li>Make delete modal</li>
+			        <li>Integrate Icons</li>
+			        <li>Get the left nav looking good</li>
+			        <li>Get nav top rhs looking good</li>
+			        <li>Build a nice login page</li>
+			        <li>Build a nice manage admin page</li>
+			        <li>Make it look good on mobile devices</li>
+			        <li>Test on different browsers</li>
+			    </p>
+
+			<p>
+				<button onclick="displayModal('test-modal')">Modal</button>
+
+				<button class="danger" onclick="displayModal('test-modal')">Delete Modal</button>
+
+				<div class="modal" id="test-modal">
+					This is a modal. Yeeeehaaaaa!
+				</div>	
+			</p>
+
+<style>
+	#overlay {
+		background-color: rgb(0,0,0,0.6);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		left: 0;
+	}
+	.modal {
+		display: block;
+		position: absolute;
+		width: 450px;
+		height: 300px;
+		background-color: red;
+		margin: 0 auto;
+		transition: top 0.4s;
+		opacity: 0;
+	}
+
+</style>
+
+<script>
+	function displayModal(elId) {
+
+		//javascript getboundingrect
+		var targetModal = document.getElementById(elId);
+
+		var domRect = targetModal.getBoundingClientRect(targetModal);
+		//{"x":960,"y":0,"width":450,"height":300,"top":0,"right":1410,"bottom":300,"left":960}
+
+		targetModal.style.opacity = 1;
+
+		//top pos (default)
+		targetModal.style.top = (domRect.height*-1) + 'px';
+		
+		//create an overlay div on the page
+		var newOverlay = document.createElement("div");
+		newOverlay.setAttribute("id", "overlay");
+		document.body.appendChild(newOverlay); 
+
+		document.getElementById(elId).remove();
+
+		newOverlay.appendChild(targetModal);
+		targetModal.style.display = 'block';
+
+		setTimeout(() => {
+
+			targetModal.style.top = '20vh';
+			//targetModal.style.right = '0px';
+
+			newOverlay.addEventListener("click", (ev) => {
+
+				if (event.target.id == "overlay") {
+					closeModal(targetModal);
+				}
+				
+			});
+
+		}, 1)
+
+	}
+
+	function closeModal(targetModal) {
+		var overlay = document.getElementById("overlay");
+		targetModal.style.display = 'none';
+		overlay.remove();
+		//add the modal by onto the page (but hidden)
+		document.body.appendChild(targetModal); 
+	}
+</script>
+
+
+
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum odit exercitationem dolor neque, necessitatibus cumque, soluta a facere? Odio, iusto. Voluptates laudantium eligendi suscipit, earum autem ipsam quam sed rerum.  
 <p>
 <a href="#" class="btn">Click Here</a> 
@@ -454,12 +555,22 @@ button {
     color: #fff;
     font-size: 0.9em;
     cursor: pointer;
-    transition: 0.6s;
 }
 
 button:hover {
     background-color: #36658c;
     border: 1px #36658c solid;
+}
+
+.danger {
+    background-color: #ff0000;
+    border: 1px #ff0000 solid;
+    color: #fff;        
+}
+
+.danger:hover {
+    background-color: #ee0000;
+    border: 1px #ee0000 solid;	
 }
 
 .alt {
@@ -521,7 +632,6 @@ a.btn {
     padding: 0.6em 1.2em;
     font-size: 0.9em;
     cursor: pointer;
-    transition: 0.6s;
 }
 
 a.btn:hover {
@@ -529,7 +639,6 @@ a.btn:hover {
 	color: var(--primary-color-font-color);
     border: 1px solid var(--primary-color-darker);
     cursor: pointer;
-    transition: 0.6s;
 }
 
 a.alt {
@@ -541,7 +650,6 @@ a.alt {
     padding: 0.6em 1.2em;
     font-size: 0.9em;
     cursor: pointer;
-    transition: 0.6s;
 }
 
 a.alt:hover {
@@ -549,7 +657,6 @@ a.alt:hover {
 	color: var(--primary-color-darker);
     border: 1px solid var(--primary-color-darker);
     cursor: pointer;
-    transition: 0.6s;
 }
 
 
