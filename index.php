@@ -3,11 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/trongate.css">
 	<title>Document</title>
 </head>
 <body>
-
 <div id="top-gutter">
 	<div>
 		<ul>
@@ -20,156 +18,138 @@
 		    <li><a href="#">Partners</a></li>
 	    </ul>
 	</div>
-	<div>
-		<a href="#">i Admin Users</a>
-	</div>
+	<div><a href="#">i Admin Users</a></div>
 </div>
-
 <div class="wrapper">
-	<div id="left-side">left side</div>
+	<div class="lhs">
+		stuff
+	</div>
 	<div>
-		<div id="main">Main center stage</div>
-		<div id="footer">
-		    <div>footer</div>
-		    <div id="btm-gutter">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum pariatur debitis laboriosam excepturi quas harum? Quisquam, aut, harum. Obcaecati dolorem sequi labore explicabo magni voluptas enim earum consequatur excepturi nemo.</div>
+		<div id="main">
+			<h1>Headline Looks Like This</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. </p>
+			<h2>Sub Headline</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam voluptas, magni harum quod? Tempora, in omnis! Beatae accusamus, voluptates eveniet delectus ducimus minus culpa commodi qui labore? Rem, ab.</p>
 		</div>
-		
+		<div id="footer">
+			<div>Footer</div>
+			<div>Powered by <a href="https://trongate.io">Trongate</a></div>
+		</div>
 	</div>
 </div>
-
-
 
 <style>
-
 :root {
 	--top-gutter-bg-color: #000;
+	--top-gutter-font-size: 1.1em;
 	--top-gutter-link: #fff;
 	--top-gutter-link-hover: #000;
-	--top-gutter-text-transform: uppercase;
-	--top-gutter-text-decoration: none;
-	--top-gutter-li-margin: 0 2em 0 0;
-	--top-gutter-li-padding: 0.5em;
-	--left-side-bg-color: #f0f0f0;
 	--footer-bg-color: #666;
-	--footer-text-color: #fff;
-	--btm-gutter-bg-color: #000;
-	--btm-gutter-text-color: #fff;
+	--footer-font-color: #fff;
+	--footer-link: #fff;
+	--footer-link-hover: #fff;
+	--footer-btm-bg-color: #333;
+	--lhs-background-color: #f0f0f0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, sans-serif;
 }
 
 #top-gutter {
 	background-color: var(--top-gutter-bg-color);
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
+	text-transform: uppercase;
+	font-size: var(--top-gutter-font-size);
 }
 
-#top-gutter a {
-	color: var(--top-gutter-link);
-	text-transform: var(--top-gutter-text-transform);
-	text-decoration: var(--top-gutter-text-decoration);
-}
-
-#top-gutter a:hover {
-	color: var(--top-gutter-link-hover);
-}
-
-#top-gutter ul {
-	list-style-type: none;
+#top-gutter > div {
 	display: flex;
-	flex-direction: row;
-	margin: 0;
-}
-
-#top-gutter li, #top-gutter li:hover, #top-gutter > div:nth-child(2) {
-	margin: var(--top-gutter-li-margin);
-	height: 100%;
-	padding: var(--top-gutter-li-padding);
-}
-
-#top-gutter li:hover, #top-gutter > div:nth-child(2):hover {
-	color: #000;
-}
-
-#left-side {
-	width: 250px;
-	background-color: var(--left-side-bg-color);
-}
-
-
-#main {
-	min-height: 80vh;
-}
-
-#left-side, #main {
-	padding: 1.8em;
-}
-
-#footer {
-	min-height: 200px;
-}
-
-#footer {
-	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-#footer > div {
-	width: 100%;
+#top-gutter ul {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
-#footer > div:nth-child(1) {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	min-height: 100px;
-	text-indent: 20px;
+#top-gutter a {
+	padding: 0.6em 0.7em;
+	text-decoration: none;
+	color: var(--top-gutter-link)
+}
 
+#top-gutter a:hover {
+	background-color: var(--top-gutter-link);
+	color: #000;
 }
 
 .wrapper {
+	background-color: silver;
 	display: flex;
 	flex-direction: row;
 	min-height: 100vh;
 }
 
 .wrapper > div:nth-child(2) {
-	display: flex;
-	flex-direction: column;
+	background-color: #fff;
 	width: 100%;
-}
-
-#footer {
-	background-color: var(--footer-bg-color);
-	color: var(--footer-text-color);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: space-between;
 }
 
-#btm-gutter {
-	background-color: var(--btm-gutter-bg-color);
-	color: var(--btm-gutter-text-color);
+.lhs {
+	width: 250px;
+	background-color: var(--lhs-background-color);
+	padding: 26px;
 }
+
+#main {
+	background-color: #fff;
+	padding: 24px 36px;
+}
+
+
+
+#footer {
+	background-color: var(--footer-bg-color);
+	color: var(--footer-font-color);
+}
+
+#footer > div:nth-child(1) {
+	line-height: 3.6em;
+	padding: 36px;
+}
+
+#footer > div:nth-child(2) {
+	background-color: var(--footer-btm-bg-color);
+	padding: 22px 36px;
+}
+
+#footer a {
+	color: var(--footer-link);
+}
+
+#footer a:hover {
+	color: var(--footer-link-hover);
+}
+
+p {
+	line-height: 1.4em;
+}
+
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
