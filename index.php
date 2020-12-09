@@ -27,9 +27,88 @@
 	<div>
 		<div id="main">
 			<h1>Headline Looks Like This</h1>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum odit exercitationem dolor neque, necessitatibus cumque, soluta a facere? Odio, iusto. Voluptates laudantium eligendi suscipit, earum autem ipsam quam sed rerum.  
+<p>
+<a href="#" class="btn">Click Here</a> 
+<a href="#" class="alt">Click Here</a>
+</p>
+
+
+
+			</p>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. </p>
+
+<h2>Small Buttons</h2>
+			<p>
+				<button class="sm">Primary</button>
+			    <button class="sm alt">Secondary</button>
+			    <button class="sm danger">Danger</button>
+			</p>
+<h2>Normal Buttons</h2>
+			<p>
+				<button>Primary</button>
+			    <button class="alt">Secondary</button>
+			    <button class="danger">Danger</button>
+			</p>
+
+<h2>Large Buttons</h2>
+			<p>
+				<button class="lg">Primary</button>
+			    <button class="lg alt">Secondary</button>
+			    <button class="lg danger">Danger</button>
+			</p>
+
+			<table>
+				<thead>
+					<tr class="primary">
+						<th>One</th>
+						<th>Two</th>
+						<th>Three</th>
+						<th>Four</th>
+					</tr>
+					<tr class="secondary">
+						<th>One</th>
+						<th>Two</th>
+						<th>Three</th>
+						<th>Four</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>One</td>
+					<td>Two</td>
+					<td>Three</td>
+					<td>Four</td>
+				</tr>
+				<tr>
+					<td>One</td>
+					<td>Two</td>
+					<td>Three</td>
+					<td>Four</td>
+				</tr>
+				<tr>
+					<td>One</td>
+					<td>Two</td>
+					<td>Three</td>
+					<td>Four</td>
+				</tr>
+				<tr>
+					<td>One</td>
+					<td>Two</td>
+					<td>Three</td>
+					<td>Four</td>
+				</tr>
+				<tr>
+					<td>One</td>
+					<td>Two</td>
+					<td>Three</td>
+					<td>Four</td>
+				</tr>
+			</table>
+
+
 			<h2>Sub Headline</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam voluptas, magni harum quod? Tempora, in omnis! Beatae accusamus, voluptates eveniet delectus ducimus minus culpa commodi qui labore? Rem, ab.</p>
+
+			<p><a href="sdfsdrfese">Click here</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam voluptas, magni harum quod? Tempora, in omnis! Beatae accusamus, voluptates eveniet delectus ducimus minus culpa commodi qui labore? Rem, ab.</p>
 		</div>
 		<div id="footer">
 			<div>Footer</div>
@@ -40,6 +119,13 @@
 
 <style>
 :root {
+	--primary-color: #4076a3;
+	--primary-color-darker: #305574;
+	--primary-color-font-color: #fff;
+	--border-radius: 0; 
+	--secondary-color: SteelBlue;
+	--secondary-color-darker: #36658c;
+	--secondary-color-font-color: #ff0000;
 	--top-gutter-bg-color: #000;
 	--top-gutter-font-size: 1.1em;
 	--top-gutter-link: #fff;
@@ -50,6 +136,8 @@
 	--footer-link-hover: #fff;
 	--footer-btm-bg-color: #333;
 	--lhs-background-color: #f0f0f0;
+	--link-font-color: SteelBlue;
+	--link-font-color-hover: #305574;
 }
 
 body {
@@ -148,6 +236,199 @@ body {
 p {
 	line-height: 1.4em;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+tr.secondary > th {
+	background-color: var(--secondary-color) !important;
+}
+
+th, td {
+    border: 1px solid var(--primary-color-darker);
+    padding: 0.7em;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+tr:hover, tr:nth-child(odd):hover {
+    background-color: #fdfdea;
+}
+
+tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.primary {
+	background-color: var(--primary-color);
+}
+
+a {
+	color: var(--link-font-color);
+}
+
+a:hover {
+	color: var(--link-font-color-hover);
+}
+
+form {
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    padding: 0.6em 0.6em;
+    font-size: 1em;
+    width: 100%;
+    border: 1px #333 solid;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+    border: 1px SteelBlue solid;
+    outline: 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"], button, textarea, select {
+    border-radius: var(--border-radius);
+}
+
+textarea {
+    padding: 0.6em 0.6em;
+    font-size: 1.231em;
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+    border: 1px #333 solid; 
+    line-height: 1.6em;       
+}
+
+label {
+    margin: 1.4em 0 0.4em 0;
+    clear: both;
+    display: block;
+}
+
+button {
+    background-color: SteelBlue;
+    border: 1px SteelBlue solid;
+    margin: 1em 0.1em 0 0;
+    padding: 0.6em 1.2em;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+button:hover {
+    background-color: #36658c;
+    border: 1px #36658c solid;
+}
+
+.alt {
+    background-color: transparent;
+    border: 1px SteelBlue solid;
+    color: #333;        
+}
+
+.alt:hover {
+    background-color: transparent;
+    border: 1px #36658c solid;
+    color: SteelBlue;
+}
+
+ul {
+    margin: 2em 0;
+    list-style-type: circle;
+}
+
+li {
+    line-height: 1.8em;
+}
+
+input[type="checkbox"] {
+  top: 0.3em;
+  position: relative;
+  width: 1.4em; height: 1.4em;
+}
+
+input[type="radio"] {
+    margin: 1.6em 0 2em 1em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #555;
+    margin: 2em 0;
+}
+
+@media screen and (max-width: 550px) {
+  button {
+    width: 100%;
+  }
+}
+
+
+a.btn {
+	background-color: var(--primary-color);
+	color: var(--primary-color-font-color);
+	text-decoration: none;
+    border: 1px solid var(--primary-color);
+    margin: 1em 0.1em 0 0;
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+a.btn:hover {
+	background-color: var(--primary-color-darker);
+	color: var(--primary-color-font-color);
+    border: 1px solid var(--primary-color-darker);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+a.alt {
+	background-color: transparent;
+	color: var(--primary-color);
+	text-decoration: none;
+    border: 1px solid var(--primary-color);
+    margin: 1em 0.1em 0 0;
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+a.alt:hover {
+	background-color: transparent;
+	color: var(--primary-color-darker);
+    border: 1px solid var(--primary-color-darker);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.sm {
+	font-size: 0.7em;
+}
+
+.lg {
+	font-size: 1.2em;
+}
+
+
+
+
 
 </style>
 
