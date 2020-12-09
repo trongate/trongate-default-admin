@@ -36,6 +36,133 @@
 
 
 			</p>
+
+
+<h2>Sample Panels</h2>
+
+<div class="card">
+	<div class="card-head">Options</div>
+	<div class="card-body">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
+	</div>
+</div>
+
+<div style="display: flex; flex-direction: row; margin-top: 33px;">
+	<div style="padding-right: 12px; width: 50%;">
+		
+<div class="card">
+	<div class="card-head">Options</div>
+	<div class="card-body">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
+	</div>
+</div>
+
+	</div>
+	<div style="padding-left: 12px; width: 50%;">
+		
+<div class="card">
+	<div class="card-head">Options</div>
+	<div class="card-body">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div style="margin-top: 22px;">
+
+</div>
+
+
+<style>
+.table-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.table-header > div:nth-child(1) {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.table-header > div:nth-child(1) > div {
+	margin-right: 4px;
+}
+
+.table-header > div:nth-child(1) button {
+	margin-top: 0 !important;
+	font-size: 0.8em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+}
+
+
+
+</style>
+
+			<table>
+				<thead>
+					<tr class="primary">
+						<th colspan="4" style="paxdding: 0;">
+							<div class="table-header">
+								<div>
+									<div>Search Records:</div> 
+									<div class="sm"><input type="text" placeholder="Enter search phrase here"></div>
+									<div><button class="alt">Search</button></div> 
+								</div>
+								<div>Records Per Page: </div>								
+							</div>
+
+						</th>
+					</tr>
+					<tr class="secondary">
+						<th>One</th>
+						<th>Two</th>
+						<th>Three</th>
+						<th>Four</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+				</tbody>
+			</table>
+
+
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. </p>
 
 <h2>Small Buttons</h2>
@@ -73,36 +200,38 @@
 						<th>Four</th>
 					</tr>
 				</thead>
-				<tr>
-					<td>One</td>
-					<td>Two</td>
-					<td>Three</td>
-					<td>Four</td>
-				</tr>
-				<tr>
-					<td>One</td>
-					<td>Two</td>
-					<td>Three</td>
-					<td>Four</td>
-				</tr>
-				<tr>
-					<td>One</td>
-					<td>Two</td>
-					<td>Three</td>
-					<td>Four</td>
-				</tr>
-				<tr>
-					<td>One</td>
-					<td>Two</td>
-					<td>Three</td>
-					<td>Four</td>
-				</tr>
-				<tr>
-					<td>One</td>
-					<td>Two</td>
-					<td>Three</td>
-					<td>Four</td>
-				</tr>
+				<tbody>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+					<tr>
+						<td>One</td>
+						<td>Two</td>
+						<td>Three</td>
+						<td>Four</td>
+					</tr>
+				</tbody>
 			</table>
 
 
@@ -334,13 +463,13 @@ button:hover {
 }
 
 .alt {
-    background-color: transparent;
+    background-color: #fff;
     border: 1px SteelBlue solid;
     color: #333;        
 }
 
 .alt:hover {
-    background-color: transparent;
+    background-color: #fff;
     border: 1px #36658c solid;
     color: SteelBlue;
 }
@@ -374,6 +503,11 @@ hr {
 @media screen and (max-width: 550px) {
   button {
     width: 100%;
+  }
+
+  a.alt, a.btn {
+  	display: block;
+  	text-align: center;
   }
 }
 
@@ -418,8 +552,9 @@ a.alt:hover {
     transition: 0.6s;
 }
 
+
 .sm {
-	font-size: 0.7em;
+	font-size: 0.8em;
 }
 
 .lg {
@@ -427,6 +562,25 @@ a.alt:hover {
 }
 
 
+
+.card {
+	border: 1px solid var(--primary-color-darker);
+	-webkit-box-shadow: 0px 6px 5px 4px rgba(0,0,0,0.16);
+	-moz-box-shadow: 0px 6px 5px 4px rgba(0,0,0,0.16);
+	box-shadow: 0px 6px 5px 4px rgba(0,0,0,0.16);
+}
+
+.card-head {
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 12px;
+	font-size: 1.3em;
+}
+
+.card-body {
+	padding: 12px;
+
+}
 
 
 
