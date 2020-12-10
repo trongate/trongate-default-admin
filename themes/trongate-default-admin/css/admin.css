@@ -2,7 +2,7 @@
 	--primary-color: #4076a3;
 	--primary-color-darker: #305574;
 	--primary-color-font-color: #fff;
-	--border-radius: 0; 
+	--border-radius: 0;
 	--secondary-color: SteelBlue;
 	--secondary-color-darker: #36658c;
 	--secondary-color-font-color: #ff0000;
@@ -16,6 +16,11 @@
 	--footer-link-hover: #fff;
 	--footer-btm-bg-color: #333;
 	--aside-background-color: #f0f0f0;
+
+	--aside-link: #000;
+	--aside-link-hover: #305574;
+	--aside-background-color: #f0f0f0;
+
 	--link-font-color: SteelBlue;
 	--link-font-color-hover: #305574;
 }
@@ -59,7 +64,7 @@ body {
 
 #top-gutter a:hover {
 	background-color: var(--top-gutter-link);
-	color: #000;
+	color: var(--top-gutter-link-hover);
 }
 
 .wrapper {
@@ -79,6 +84,25 @@ aside {
 	width: 250px;
 	background-color: var(--aside-background-color);
 	padding: 26px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+aside nav ul li {
+	margin-bottom: 12px;
+}
+
+aside nav ul li a {
+	color: var(--aside-link);
+	text-decoration: none;
+}
+
+aside nav ul li a:hover {
+	color: var(--aside-link-hover);
 }
 
 main {

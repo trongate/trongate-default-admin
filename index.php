@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="themes/trongate-default-admin/css/admin.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Document</title>
 </head>
 <body>
@@ -19,22 +20,32 @@
 				<li><a href="#">Partners</a></li>
 			</ul>
 		</div>
-		<div><a href="#">i Admin Users</a></div>
+		<div><a href="#"><i class="fa fa-gears"></i> Admin Users</a></div>
 	</nav>
 	<div class="wrapper">
-		<aside> left side </aside>
+		<aside>	
+			<h2>Menu</h2>
+			<nav>
+				<ul>
+					<li><a href="#"><i class="fa fa-book"></i> Manage Books</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Manage Books</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Manage Books</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Manage Books</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Manage Books</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Manage Books</a></li>
+				</ul>
+			</nav>
+		</aside>
 		<div><!-- contains both main and footer: defined as, .wrapper > div:nth-child(2) -->
 			<main>
 				<h1>Headline Looks Like This</h1>
 				<p>
 					<ul>
-						<li>Integrate Icons</li>
-						<li>Get the left nav looking good</li>
-						<li>Get nav top rhs looking good</li>
-						<li>Build a nice login page</li>
-						<li>Build a nice manage admin page</li>
 						<li>Make it look good on mobile devices</li>
 						<li>Test on different browsers</li>
+						<li>Build a nice login page</li>
+						<li>Build a nice manage admin page</li>
+					</ul>
 				</p>
 				<p>
 					<button onclick="displayModal('test-modal')">Modal</button>
@@ -79,7 +90,7 @@
 				<table>
 					<thead>
 						<tr class="primary">
-							<th colspan="4" style="paxdding: 0;">
+							<th colspan="4">
 								<div class="table-header">
 									<div>
 										<div>Search Records:</div>
