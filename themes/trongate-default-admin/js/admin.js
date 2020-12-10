@@ -45,3 +45,49 @@ function closeModal(targetModal) {
 	//add the modal by onto the page (but hidden)
 	document.body.appendChild(targetModal); 
 }
+
+var sideNavOpen = false;
+var sideNav = document.getElementById("side-nav");
+var closeBtn = document.getElementById("close-btn");
+var hamburger = document.getElementById("hamburger");
+var pageBody = document.getElementsByTagName("body")[0];
+
+function childOf(node, ancestor) {
+    var child = node;
+    while (child !== null) {
+        if (child === ancestor) return true;
+        child = child.parentNode;
+    }
+    return false;   
+}
+
+function closeSideNav() {
+	sideNav.style.opacity = 0;
+	sideNav.style.width = '0';	
+	sideNav.style.zIndex = -1;
+	sideNavOpen = false;
+}
+
+
+function openSideNav() {
+	sideNav.style.opacity = 1;
+	sideNav.style.width = '250px';
+	sideNav.style.zIndex = 2;
+	sideNavOpen = true;	
+}
+
+pageBody.addEventListener("click", (ev) => {
+
+	var clickedEl = ev.target;
+	var insideSideNav = childOf(clickedEl, sideNav);
+
+	if ((sideNavOpen == true) && (insideSideNav == false)) {
+		var insideHamburger = childOf(clickedEl, hamburger);
+
+		if (insideHamburger == false) {
+			closeSideNav();
+		}
+		
+	}
+
+});

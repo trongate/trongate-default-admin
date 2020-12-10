@@ -25,66 +25,13 @@
 	</nav>
 
 	<nav id="side-nav">
-		<div id="close-btn"><i class="fa fa-remove"></i></div>
+		<div id="close-btn" onclick="closeSideNav()"><i class="fa fa-remove"></i></div>
 		<ul>
 			<li><a href="#"><i class="fa fa-user"></i> Link 1</a></li>
 			<li><a href="#"><i class="fa fa-star"></i> Link 2</a></li>
 			<li><a href="#"><i class="fa fa-pencil"></i> Link 3</a></li>
 		</ul>
 	</nav>
-
-
-<script>
-var sideNavOpen = false;
-var sideNav = document.getElementById("side-nav");
-// var main = document.getElementById("main");
-
-function openSideNav() {
-	sideNav.style.opacity = 1;
-	sideNav.style.width = '250px';
-	sideNav.style.zIndex = 2;
-	sideNavOpen = true;
-}
-
-// function closeSideNav() {
-// 	sideNav.style.opacity = 0;
-// 	sideNav.style.width = '0';	
-// 	sideNav.style.zIndex = -1;
-// 	sideNavOpen = false;	
-// }
-
-// main.addEventListener('click', (ev) => {
-
-// 	if ((sideNavOpen == true) && (ev.target.id !== 'open-btn')) {
-// 		closeSideNav();
-// 	}
-
-// });
-
-
-setInterval(() => {
-
-	toggleSideNav();
-
-}, 2000);
-
-function toggleSideNav() {
-
-	if (sideNavOpen == false) {
-		sideNav.style.opacity = 1;
-		sideNav.style.width = '250px';
-		sideNav.style.zIndex = 2;
-		sideNavOpen = true;		
-	} else {
-		sideNav.style.opacity = 0;
-		sideNav.style.width = '0';	
-		sideNav.style.zIndex = -1;
-		sideNavOpen = false;		
-	}
-
-}
-</script>
-
 	<div class="wrapper">
 		<aside>	
 			<h2>Menu</h2>

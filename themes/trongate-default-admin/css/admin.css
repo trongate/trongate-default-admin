@@ -398,12 +398,16 @@ a.alt:hover {
 	opacity: 0;
 }
 
+#close-btn, #hamburger {
+	cursor: pointer;
+}
+
 
 #side-nav {
 	background-color: var(--side-nav-background-color);
-	width: 250px;
-	z-index: 1;
-	opacity: 1;
+	width: 0;
+	z-index: -1;
+	opacity: 0;
 	height: 100vh;
 	position: fixed;
 	top: 0;
