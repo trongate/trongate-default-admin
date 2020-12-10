@@ -21,27 +21,69 @@
 			</ul>
 		</div>
 		<div><a href="#"><i class="fa fa-gears"></i> Admin Users</a></div>
-		<div id="hamburger"><a href="#"><i class="fa fa-bars"></i></a></div>
+		<div id="hamburger" onclick="openSideNav()"><a href="#"><i class="fa fa-bars"></i></a></div>
 	</nav>
 
-<style>
-@media screen and (max-width: 900px) {
+	<nav id="side-nav">
+		<div id="close-btn"><i class="fa fa-remove"></i></div>
+		<ul>
+			<li><a href="#"><i class="fa fa-user"></i> Link 1</a></li>
+			<li><a href="#"><i class="fa fa-star"></i> Link 2</a></li>
+			<li><a href="#"><i class="fa fa-pencil"></i> Link 3</a></li>
+		</ul>
+	</nav>
 
-  #hamburger {
-  	font-size: 1.2em;
-  }
 
-  #top-gutter > div:nth-child(1), #top-gutter > div:nth-child(2), aside {
-  	display: none;
-  } 
+<script>
+var sideNavOpen = false;
+var sideNav = document.getElementById("side-nav");
+// var main = document.getElementById("main");
+
+function openSideNav() {
+	sideNav.style.opacity = 1;
+	sideNav.style.width = '250px';
+	sideNav.style.zIndex = 2;
+	sideNavOpen = true;
 }
 
-@media screen and (min-width: 900px) {
-  #hamburger {
-  	display: none !important;
-  }
+// function closeSideNav() {
+// 	sideNav.style.opacity = 0;
+// 	sideNav.style.width = '0';	
+// 	sideNav.style.zIndex = -1;
+// 	sideNavOpen = false;	
+// }
+
+// main.addEventListener('click', (ev) => {
+
+// 	if ((sideNavOpen == true) && (ev.target.id !== 'open-btn')) {
+// 		closeSideNav();
+// 	}
+
+// });
+
+
+setInterval(() => {
+
+	toggleSideNav();
+
+}, 2000);
+
+function toggleSideNav() {
+
+	if (sideNavOpen == false) {
+		sideNav.style.opacity = 1;
+		sideNav.style.width = '250px';
+		sideNav.style.zIndex = 2;
+		sideNavOpen = true;		
+	} else {
+		sideNav.style.opacity = 0;
+		sideNav.style.width = '0';	
+		sideNav.style.zIndex = -1;
+		sideNavOpen = false;		
+	}
+
 }
-</style>
+</script>
 
 	<div class="wrapper">
 		<aside>	
@@ -60,16 +102,18 @@
 		<div><!-- contains both main and footer: defined as, .wrapper > div:nth-child(2) -->
 			<main>
 				
-				<h1>Headline Looks Like This</h1>
+				<h1>Headline with H1 tags</h1>
 			
 				<p>
 					<ul>
 						<li>Make it look good on mobile devices</li>
-						<li>Test on different browsers</li>
-						<li>Build a nice login page</li>
-						<li>Build a nice manage admin page</li>
+						<li>Test on different browsers (non-urgent)</li>
+						<li>Build a nice login page (non-urgent)</li>
+						<li>Build a nice manage admin page (non-urgent)</li>
 					</ul>
 				</p>
+
+
 				<p>
 					<button onclick="displayModal('test-modal')">Modal</button>
 					<button class="danger" onclick="displayModal('test-modal')">Delete Modal</button>
@@ -82,9 +126,15 @@
 						</div>
 					</div>
 				</p>
+
+
+
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum odit exercitationem dolor neque, necessitatibus cumque, soluta a facere? Odio, iusto. Voluptates laudantium eligendi suscipit, earum autem ipsam quam sed rerum.
 					<p> <a href="#" class="btn">Click Here</a> <a href="#" class="alt">Click Here</a> </p>
 				</p>
+
+				
+
 				<h2>Sample Panels</h2>
 				<div class="card">
 					<div class="card-head">Options</div>
@@ -99,15 +149,15 @@
 							<th colspan="4">
 								<div class="table-header">
 									<div>
-										<div>Search Records:</div>
+										
 										<div class="sm">
-											<input type="text" placeholder="Enter search phrase here">
+											<input type="text" placeholder="Search books...">
 										</div>
 										<div>
-											<button class="alt">Search</button>
+											<button class="alt"><i class="fa fa-search"></i></button>
 										</div>
 									</div>
-									<div>Records Per Page: </div>
+									<div><span class="hide-at-sm">Records </span>Per Page: </div>
 								</div>
 							</th>
 						</tr>
@@ -151,6 +201,9 @@
 						</tr>
 					</tbody>
 				</table>
+
+
+
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea, dignissimos quaerat quod, cum sed ex illo quae, placeat at accusamus facilis vero voluptate, architecto commodi fuga dolores dolor. Dolores. </p>
 				<h2>Small Buttons</h2>
 				<p>
@@ -170,6 +223,9 @@
 					<button class="lg alt">Secondary</button>
 					<button class="lg danger">Danger</button>
 				</p>
+
+
+
 				<table>
 					<thead>
 						<tr class="primary">
@@ -218,8 +274,13 @@
 						</tr>
 					</tbody>
 				</table>
+
+
+
 				<h2>Sub Headline</h2>
 				<p><a href="sdfsdrfese">Click here</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam voluptas, magni harum quod? Tempora, in omnis! Beatae accusamus, voluptates eveniet delectus ducimus minus culpa commodi qui labore? Rem, ab.</p>
+
+		
 			</main>
 			<footer>
 				<div>Footer</div>

@@ -20,6 +20,8 @@
 	--aside-background-color: #f0f0f0;
 	--link-font-color: SteelBlue;
 	--link-font-color-hover: #305574;
+	--side-nav-background-color: #305574;
+	--side-nav-font-color: #fff;
 }
 
 body {
@@ -214,18 +216,18 @@ label {
 }
 
 button {
-    background-color: SteelBlue;
-    border: 1px SteelBlue solid;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);;
     margin: 1em 0.1em 0 0;
     padding: 0.6em 1.2em;
-    color: #fff;
+    color: var(--primary-color-font-color);
     font-size: 0.9em;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #36658c;
-    border: 1px #36658c solid;
+    background-color: var(--primary-color-darker);
+    border: 1px solid var(--primary-color-darker);
 }
 
 .danger {
@@ -241,14 +243,14 @@ button:hover {
 
 .alt {
     background-color: #fff;
-    border: 1px SteelBlue solid;
+    border: 1px solid var(--primary-color);
     color: #333;        
 }
 
 .alt:hover {
     background-color: #fff;
-    border: 1px #36658c solid;
-    color: SteelBlue;
+    border: 1px solid var(--primary-color-darker);
+    color: var(--primary-color-darker);
 }
 
 ul {
@@ -389,11 +391,48 @@ a.alt:hover {
 	display: block;
 	position: absolute;
 	width: 450px;
+	max-width: 90%;
 	background-color: white;
 	margin: 0 auto;
 	transition: top 0.4s;
 	opacity: 0;
 }
+
+
+#side-nav {
+	background-color: var(--side-nav-background-color);
+	width: 250px;
+	z-index: 1;
+	opacity: 1;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: 0.2s;
+	color: var(--side-nav-font-color);
+	padding: 0 12px;
+}
+
+#side-nav ul {
+	margin-top: 12px;
+}
+
+#side-nav ul li {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#side-nav ul li a {
+	color: var(--side-nav-font-color);
+	text-decoration: none;
+}
+
+#close-btn {
+	margin-top: 6px;
+	font-size: 2.1em;
+}
+
 
 @media screen and (max-width: 550px) {
   button {
@@ -403,5 +442,26 @@ a.alt:hover {
   a.alt, a.btn {
   	display: block;
   	text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  #hamburger {
+  	font-size: 1.2em;
+  }
+
+  #top-gutter > div:nth-child(1), #top-gutter > div:nth-child(2), aside {
+  	display: none;
+  } 
+
+  .hide-at-sm {
+  	display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #hamburger {
+  	display: none !important;
   }
 }
