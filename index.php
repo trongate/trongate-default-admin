@@ -47,7 +47,12 @@
 				<button class="danger" onclick="displayModal('test-modal')">Delete Modal</button>
 
 				<div class="modal" id="test-modal">
-					This is a modal. Yeeeehaaaaa!
+					<div class="card">
+						<div class="card-head">Options</div>
+						<div class="card-body">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
+						</div>
+					</div>
 				</div>	
 			</p>
 
@@ -67,8 +72,7 @@
 		display: block;
 		position: absolute;
 		width: 450px;
-		height: 300px;
-		background-color: red;
+		background-color: white;
 		margin: 0 auto;
 		transition: top 0.4s;
 		opacity: 0;
@@ -689,7 +693,13 @@ a.alt:hover {
 
 }
 
+.card-danger {
+    border: 1px red solid;
+}
 
+.card-danger .card-head {
+	background-color: red;
+}
 
 </style>
 
