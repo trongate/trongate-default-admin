@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Document</title>
 </head>
 <body>
@@ -22,7 +23,9 @@
 </div>
 <div class="wrapper">
 	<div class="lhs">
-		stuff
+		<h2>Menu</h2>
+
+		<a class="w3-bar-item w3-button w3-hover-black" href="http://localhost/a_test_app/books/manage"><i class="fa fa-book"></i> Manage Books</a>
 	</div>
 	<div>
 		<div id="main">
@@ -30,8 +33,6 @@
 
 			<p>
 				<ul>
-					<li>Make modal look nice (big and small one?)</li>
-			        <li>Make delete modal</li>
 			        <li>Integrate Icons</li>
 			        <li>Get the left nav looking good</li>
 			        <li>Get nav top rhs looking good</li>
