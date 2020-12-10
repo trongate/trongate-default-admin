@@ -21,7 +21,28 @@
 			</ul>
 		</div>
 		<div><a href="#"><i class="fa fa-gears"></i> Admin Users</a></div>
+		<div id="hamburger"><a href="#"><i class="fa fa-bars"></i></a></div>
 	</nav>
+
+<style>
+@media screen and (max-width: 900px) {
+
+  #hamburger {
+  	font-size: 1.2em;
+  }
+
+  #top-gutter > div:nth-child(1), #top-gutter > div:nth-child(2), aside {
+  	display: none;
+  } 
+}
+
+@media screen and (min-width: 900px) {
+  #hamburger {
+  	display: none !important;
+  }
+}
+</style>
+
 	<div class="wrapper">
 		<aside>	
 			<h2>Menu</h2>
@@ -38,7 +59,9 @@
 		</aside>
 		<div><!-- contains both main and footer: defined as, .wrapper > div:nth-child(2) -->
 			<main>
+				
 				<h1>Headline Looks Like This</h1>
+			
 				<p>
 					<ul>
 						<li>Make it look good on mobile devices</li>
@@ -69,24 +92,7 @@
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
 					</div>
 				</div>
-				<div style="display: flex; flex-direction: row; margin-top: 33px;">
-					<div style="padding-right: 12px; width: 50%;">
-						<div class="card">
-							<div class="card-head">Options</div>
-							<div class="card-body">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
-							</div>
-						</div>
-					</div>
-					<div style="padding-left: 12px; width: 50%;">
-						<div class="card">
-							<div class="card-head">Options</div>
-							<div class="card-body">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum deleniti a, optio alias tenetur quasi veritatis exercitationem ad quae officiis reiciendis provident quia molestiae est earum eaque! Consequuntur, ipsa!</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				<table>
 					<thead>
 						<tr class="primary">
